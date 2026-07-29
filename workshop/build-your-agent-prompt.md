@@ -1,8 +1,8 @@
 # The "build your agent" prompt
 
-This is the one you paste at the workshop, after you've opened the project in Claude Code.
-It interviews you and writes your agent's instructions — the `CLAUDE.md` file — from your
-answers. No code. You're briefing an assistant, not programming one.
+Paste this after you've opened the project in Claude Code. It interviews you and writes
+your agent's identity from your answers. No code — you're briefing an assistant, not
+programming one.
 
 ---
 
@@ -14,7 +14,8 @@ The agent will live in this project. What's already here:
 - data/inbox.md and data/calendar.md - a week of my emails and meetings
 - me.md - who I am
 - rubric.md - what matters to me
-- a skill called briefing-page that renders a polished HTML page
+- example/briefing-example.html - what a good result looks like
+- a skill called briefing-page that renders the finished page
 
 Interview me. One question at a time, wait for my answer before the next:
 
@@ -26,22 +27,30 @@ Interview me. One question at a time, wait for my answer before the next:
 5. When it's unsure whether something matters, what should it do?
 6. Anything it should never do?
 
-Then write the file CLAUDE.md in this project, based on my answers. It must:
-- open by telling the agent who it is and who it works for, in my words
+Then write two files from my answers.
+
+IDENTITY.md - this is the agent itself, in plain English:
+- open by saying who it is and who it works for, in my words
 - send it to me.md for who I am, and rubric.md for what matters to me
 - point it at data/inbox.md and data/calendar.md, and note that later it can read my real
   Gmail and Google Calendar instead, with everything else unchanged
 - lay out the output I asked for, in the order I want it
-- tell it to use the briefing-page skill to write briefing.html
+- tell it to open example/briefing-example.html first and match that standard, then use
+  the briefing-page skill to write briefing.html
 - carry my rules, especially the one about sending
 
-Write it in plain English - no code, no jargon. It should read like instructions to a
-sharp new assistant on their first day. Show me the file when it's done, and tell me in
-one line what to say next to make it run.
+CLAUDE.md - three lines only: read IDENTITY.md, then me.md and rubric.md.
+
+Write both in plain English, no code, no jargon - like instructions to a sharp new
+assistant on their first day. Show me IDENTITY.md when it's done, and tell me in one line
+what to say next to make it run.
 ```
 
 ---
 
-**If you get stuck or run short on time:** `workshop/CLAUDE.example.md` is a finished
-version. Copy it to `CLAUDE.md` in the main folder and carry on — you can always come back
-and build your own.
+**Why two files.** `IDENTITY.md` is the portable part — plain English, no tool anywhere in
+it. Take that file to Cursor or any other coding agent and it still describes your agent.
+`CLAUDE.md` is only the door Claude Code walks through.
+
+**If you get stuck or run short on time:** `workshop/IDENTITY.example.md` is a finished
+version. Copy it to `IDENTITY.md` in the main folder and carry on.

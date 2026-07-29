@@ -10,6 +10,13 @@ You configure it in plain English. **No code.**
 
 ---
 
+## Doing this on your own?
+
+**[`workshop/guide.html`](workshop/guide.html)** is the full walkthrough — nine steps at your
+own pace, from empty machine to an agent that runs without you. Download it, open it in a
+browser. Starting a *different* agent from scratch?
+**[`workshop/start-your-own-agent.md`](workshop/start-your-own-agent.md)**.
+
 ## Before the workshop
 
 Open **[`workshop/prep.html`](workshop/prep.html)** in your browser (download it, then
@@ -41,7 +48,7 @@ rubric → write where you already look.**
 3. **Build your agent.** Paste the prompt from
    [`workshop/build-your-agent-prompt.md`](workshop/build-your-agent-prompt.md). It asks
    you six questions — what your agent should do, how strict it should be, whether it may
-   ever send anything — and writes `CLAUDE.md` from your answers.
+   ever send anything — and writes **`IDENTITY.md`** from your answers.
    **That file is your agent, and you wrote it.**
 4. **Set your rules** in `rubric.md`: what must always reach you, what's safe to skip.
 5. Say:
@@ -51,8 +58,8 @@ rubric → write where you already look.**
 6. Open `briefing.html`. That's your agent's work.
 7. Not happy with a call it made? Change your rubric, run it again. That's iterating.
 
-*Short on time or stuck? `workshop/CLAUDE.example.md` is a finished version — copy it to
-`CLAUDE.md` and carry on.*
+*Short on time or stuck? `workshop/IDENTITY.example.md` is a finished version — copy it to
+`IDENTITY.md` and carry on.*
 
 ## Make it real
 
@@ -72,8 +79,10 @@ rubric → write where you already look.**
 | `rubric.md` | What matters to you — the agent judges *by* this. |
 | `data/inbox.md` | Sample emails. Later: your real inbox. |
 | `data/calendar.md` | Sample calendar. Later: your real calendar. |
-| `CLAUDE.md` | Your agent's instructions — **you write this** at step 3. |
+| `IDENTITY.md` | Your agent, in plain English — **you write this** at step 3. Portable: it works in any coding tool. |
+| `CLAUDE.md` | Three lines that point Claude Code at the files above. |
+| `example/briefing-example.html` | What a good result looks like. Your agent aims at this. |
 | `.claude/skills/briefing-page/SKILL.md` | How the briefing page gets built. |
-| `workshop/` | Prep page, slides, both prompts, and a finished `CLAUDE.example.md`. |
+| `workshop/` | Prep page, slides, the prompts, the async guide, and a finished `IDENTITY.example.md`. |
 
 The agent **drafts, it never sends.** Everything it produces is yours to check first.

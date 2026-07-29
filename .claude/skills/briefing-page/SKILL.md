@@ -5,6 +5,11 @@ description: Render a weekly briefing as one clean, calm HTML page. Fires when t
 
 # Briefing page
 
+**Look at `example/briefing-example.html` before you write anything.** That is the
+standard to hit: a photo up top, a warm one-line greeting, a row of counts, then the
+sections. Match that level of finish — don't settle for a plain list.
+
+
 Turn the briefing into a single self-contained `briefing.html` in the repo root.
 The reader skims it in two minutes with a coffee. It should feel calm and finished —
 not a wall of text, not a dashboard.
