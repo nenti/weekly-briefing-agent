@@ -37,14 +37,22 @@ rubric → write where you already look.**
 ## Build it
 
 1. Clone this project and open the folder in Claude Code.
-2. Make it yours: edit `me.md` (who you are) and `rubric.md` (what matters to you).
-   Plain sentences — this is where your About me goes.
-3. Say:
+2. **Drop in your About me.** Paste the profile Claude wrote for you into `me.md`.
+3. **Build your agent.** Paste the prompt from
+   [`workshop/build-your-agent-prompt.md`](workshop/build-your-agent-prompt.md). It asks
+   you six questions — what your agent should do, how strict it should be, whether it may
+   ever send anything — and writes `CLAUDE.md` from your answers.
+   **That file is your agent, and you wrote it.**
+4. **Set your rules** in `rubric.md`: what must always reach you, what's safe to skip.
+5. Say:
 
    > Read my inbox and calendar, apply my rubric, and build my weekly briefing.
 
-4. Open `briefing.html`. That's your agent's work.
-5. Not happy with a call it made? Change your rubric, run it again. That's iterating.
+6. Open `briefing.html`. That's your agent's work.
+7. Not happy with a call it made? Change your rubric, run it again. That's iterating.
+
+*Short on time or stuck? `workshop/CLAUDE.example.md` is a finished version — copy it to
+`CLAUDE.md` and carry on.*
 
 ## Make it real
 
@@ -64,8 +72,8 @@ rubric → write where you already look.**
 | `rubric.md` | What matters to you — the agent judges *by* this. |
 | `data/inbox.md` | Sample emails. Later: your real inbox. |
 | `data/calendar.md` | Sample calendar. Later: your real calendar. |
-| `CLAUDE.md` | The agent's standing instructions. Read it — it's plain English. |
+| `CLAUDE.md` | Your agent's instructions — **you write this** at step 3. |
 | `.claude/skills/briefing-page/SKILL.md` | How the briefing page gets built. |
-| `workshop/` | Prep page, slides, and the About me prompt. |
+| `workshop/` | Prep page, slides, both prompts, and a finished `CLAUDE.example.md`. |
 
 The agent **drafts, it never sends.** Everything it produces is yours to check first.
