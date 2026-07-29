@@ -160,7 +160,7 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .core-k{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--red);margin-bottom:12px}
 .core-loop{font-family:var(--serif);font-weight:900;font-size:30px;color:var(--ink);line-height:1.1}
 .core-s{font-size:13px;color:var(--dim);margin-top:12px}
-.arch-up{color:#c02a3d;font-size:22px;line-height:1;margin:8px 0 6px}
+
 .arch-trig{background:#fff;border:1px solid #ececec;border-radius:999px;padding:9px 22px;font-size:14px;color:#444}
 .arch-trig b{color:var(--ink)}
 .arch .chip.sm{margin-bottom:2px}
@@ -334,6 +334,21 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .exsmall .exsub.sm{color:var(--mustard)}
 .exnote{font-size:13.5px;color:#c9c9d6;margin-top:14px;line-height:1.5}
 
+.archlbl{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:9px}
+.arch-config{margin-bottom:0}
+.arch-downs{margin:4px 0}
+.memloop{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;max-width:720px;margin-top:4px}
+.mlarrow{font-size:24px;color:var(--red);line-height:1}
+.mlbox{align-self:stretch;background:#fffdf0;border:1px solid #f0e5a8;border-radius:12px;padding:11px 18px}
+.mlh{font-family:var(--serif);font-weight:900;font-size:18px;color:var(--ink)}
+.mlgrow{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:#a07d00;background:var(--mustard);border-radius:999px;
+  padding:2px 9px;margin-left:8px;vertical-align:middle}
+.mld{font-size:12.5px;color:#555;line-height:1.4;margin-top:3px;text-align:left}
+.arch-trig{margin-top:10px}
+.arch .arch-main{margin-top:2px}
+
 @page{size:1280px 720px;margin:0}
 @media screen{body{display:flex;flex-direction:column;align-items:center;gap:22px;padding:22px}
   .slide{box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,0,.5)}}
@@ -418,6 +433,34 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 </section>
 
 <section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The move that makes it easy</span></div>
+  <div class="wrap">
+    <div class="eyebrow">How a remote agent actually gets built</div>
+    <h1>You don't start one. You <b>cut one out.</b></h1>
+    <div class="extract">
+      <div class="exbig">
+        <div class="exh">Your cowork agent</div>
+        <div class="exsub">knows you, your customers, your tone, a year of notes</div>
+        <div class="exjobs">
+          <span class="exjob">briefing</span><span class="exjob">follow-ups</span>
+          <span class="exjob dim">customer one-pagers</span><span class="exjob">research</span>
+          <span class="exjob">CRM notes</span><span class="exjob">outreach</span>
+        </div>
+      </div>
+      <div class="exarrow"><span>&rarr;</span><small>lift one job out</small></div>
+      <div class="exsmall">
+        <div class="exh sm">One remote agent</div>
+        <div class="exsub sm">customer one-pagers</div>
+        <div class="exnote">Runs on its own.<br>Share it with the team.</div>
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Building a production agent from a blank page is hard. Lifting one job out of an agent that <b>already does it well with you</b> is not &mdash; the hard part, knowing your work, is already done.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · prompt vs agent</span></div>
   <div class="wrap">
     <div class="eyebrow">The difference that matters</div>
@@ -440,7 +483,7 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
       <div class="need"><div class="ne">👤</div><div class="nk">Context</div><div class="nd">who you are and how you sound.</div></div>
       <div class="need"><div class="ne">📝</div><div class="nk">Memory</div><div class="nd">what it keeps from last time.</div></div>
       <div class="need"><div class="ne">🛠️</div><div class="nk">Tools</div><div class="nd">Gmail, Calendar, Notion, what it can reach.</div></div>
-      <div class="need"><div class="ne">🎯</div><div class="nk">Goal</div><div class="nd">what a good result looks like.</div></div>
+      <div class="need"><div class="ne">🎯</div><div class="nk">Rubric</div><div class="nd">your standard for what matters.</div></div>
     </div>
     <div class="grow"></div>
     <div class="callout">You'll set five of these tonight, in <b>plain English</b>, not code. <b>Memory</b> is the one that grows by itself.</div>
@@ -579,18 +622,19 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     <h1>Every piece, and <b>what it's for</b></h1>
     <div class="arch">
 
+      <div class="archlbl">You write these once &mdash; they barely change</div>
       <div class="arch-config">
         <div class="acfg"><span class="chip sm">Identity</span><div class="fn">IDENTITY.md</div><div class="ds">who it is, what it does</div></div>
         <div class="acfg"><span class="chip sm">Context</span><div class="fn">me.md</div><div class="ds">who you are</div></div>
-        <div class="acfg"><span class="chip sm">Goal</span><div class="fn">rubric.md</div><div class="ds">what matters to you</div></div>
+        <div class="acfg"><span class="chip sm">Rubric</span><div class="fn">rubric.md</div><div class="ds">your standard</div></div>
       </div>
       <div class="arch-downs"><span>&darr;</span><span>&darr;</span><span>&darr;</span></div>
 
       <div class="arch-main">
         <div class="arch-side">
-          <span class="chip sm">Tools &middot; it reads</span>
+          <span class="chip sm">Sources &middot; it reads</span>
           <div class="asrc"><b>Local files</b><br>inbox.md &middot; calendar.md</div>
-          <div class="asrc up"><b>MCP plugs</b> <span class="tag">upgrade</span><br>Gmail &middot; Calendar &middot; Notion &middot; Sheets</div>
+          <div class="asrc up"><b>MCP plugs</b> <span class="tag">upgrade</span><br>Gmail &middot; Calendar &middot; Notion</div>
         </div>
         <div class="arch-arrow">&rarr;</div>
         <div class="arch-core">
@@ -601,13 +645,20 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
         <div class="arch-arrow">&rarr;</div>
         <div class="arch-side">
           <span class="chip sm">Output</span>
-          <div class="aout"><b>briefing.html</b><br>reply-today &middot; decisions &middot; week ahead</div>
-          <div class="aout sk"><b>Skill:</b> briefing-page<br>renders the page</div>
+          <div class="aout"><b>briefing.html</b><br>drafts &middot; decisions &middot; week ahead</div>
+          <div class="aout sk"><b>Skill:</b> briefing-page<br>renders it</div>
         </div>
       </div>
 
-      <div class="arch-up">&uarr;</div>
-      <div class="arch-trig"><span class="chip sm">Trigger</span> &nbsp;<b>manual run</b>&nbsp; &middot; &nbsp;<span class="mono">/schedule</span> Mondays 08:00</div>
+      <div class="memloop">
+        <div class="mlarrow">&#8645;</div>
+        <div class="mlbox">
+          <div class="mlh">Memory <span class="mlgrow">grows every run</span></div>
+          <div class="mld">notes/ &mdash; last week's call, why a draft missed, what a customer prefers. It reads this before it starts, and adds to it when it's done.</div>
+        </div>
+      </div>
+
+      <div class="arch-trig"><span class="chip sm">Trigger</span> &nbsp;you ask &nbsp;&middot;&nbsp; <span class="mono">/schedule</span> &nbsp;&middot;&nbsp; cloud routine</div>
 
     </div>
   </div>
@@ -774,34 +825,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     </div>
     <div class="grow"></div>
     <div class="callout">Honest: a cloud routine really does run with your laptop shut — but it only sees the connectors you set up at <b>claude.ai</b>, never what you connected locally. Closing that gap is the actual work.</div>
-  </div>
-  <div class="year">2026</div>
-</section>
-
-<section class="slide">
-  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The move that makes it easy</span></div>
-  <div class="wrap">
-    <div class="eyebrow">How a remote agent actually gets built</div>
-    <h1>You don't start one. You <b>cut one out.</b></h1>
-    <div class="extract">
-      <div class="exbig">
-        <div class="exh">Your cowork agent</div>
-        <div class="exsub">knows you, your customers, your tone, a year of notes</div>
-        <div class="exjobs">
-          <span class="exjob">briefing</span><span class="exjob">follow-ups</span>
-          <span class="exjob dim">customer one-pagers</span><span class="exjob">research</span>
-          <span class="exjob">CRM notes</span><span class="exjob">outreach</span>
-        </div>
-      </div>
-      <div class="exarrow"><span>&rarr;</span><small>lift one job out</small></div>
-      <div class="exsmall">
-        <div class="exh sm">One remote agent</div>
-        <div class="exsub sm">customer one-pagers</div>
-        <div class="exnote">Runs on its own.<br>Share it with the team.</div>
-      </div>
-    </div>
-    <div class="grow"></div>
-    <div class="callout">Building a production agent from a blank page is hard. Lifting one job out of an agent that <b>already does it well with you</b> is not &mdash; the hard part, knowing your work, is already done.</div>
   </div>
   <div class="year">2026</div>
 </section>
