@@ -291,11 +291,11 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .gl .w{font-family:var(--mono);font-weight:700;font-size:16px;color:var(--red);flex:0 0 122px}
 .gl .d{font-size:15.5px;color:#444;line-height:1.4}
 .gl.wide{grid-column:1 / -1}
-.needs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:76px}
-.need{background:#fff;border:1px solid #ececec;border-radius:12px;padding:18px 15px;text-align:center}
+.needs{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:76px}
+.need{background:#fff;border:1px solid #ececec;border-radius:12px;padding:16px 11px;text-align:center}
 .need .ne{font-size:30px;line-height:1;margin-bottom:10px}
-.need .nk{font-family:var(--serif);font-weight:900;font-size:18px;color:var(--red);margin-bottom:6px}
-.need .nd{font-size:13px;color:#444;line-height:1.35}
+.need .nk{font-family:var(--serif);font-weight:900;font-size:16.5px;color:var(--red);margin-bottom:6px}
+.need .nd{font-size:12.5px;color:#444;line-height:1.35}
 
 .apidemo{display:flex;gap:26px;margin-top:24px;align-items:flex-start}
 .apicard{flex:0 0 470px;background:#fff;border:2px solid var(--line);border-radius:14px;overflow:hidden}
@@ -306,6 +306,33 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .apiside b{color:var(--ink);font-weight:700}
 
 .cols.three{grid-template-columns:repeat(3,1fr)}
+
+.memcols{display:grid;grid-template-columns:1fr 1.25fr;gap:20px;margin-top:26px}
+.memcol{background:#fff;border:2px solid var(--line);border-radius:14px;padding:22px 24px}
+.memcol.hot{border-color:var(--red)}
+.memh{font-family:var(--serif);font-weight:900;font-size:24px;margin-bottom:8px}
+.memcol.hot .memh{color:var(--red)}
+.memcol p{font-size:15.5px;line-height:1.45;color:#444;margin:0}
+.memex{margin-top:14px;background:#f7f7fa;border-left:3px solid #d8d8e0;border-radius:0 8px 8px 0;
+  padding:11px 15px;font-size:13.5px;line-height:1.5;color:#555;font-style:italic}
+.memcol.hot .memex{border-left-color:var(--red)}
+
+.extract{display:flex;align-items:center;gap:0;margin-top:26px}
+.exbig{flex:1.5;background:#fff;border:2px solid var(--red);border-radius:16px;padding:22px 24px}
+.exh{font-family:var(--serif);font-weight:900;font-size:25px;color:var(--red)}
+.exh.sm{font-size:21px;color:var(--ink)}
+.exsub{font-size:14px;color:var(--dim);margin-top:5px}
+.exsub.sm{color:var(--ink);font-weight:600;font-size:15px}
+.exjobs{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.exjob{background:#f4f4f8;border-radius:999px;padding:5px 14px;font-size:13.5px;color:#555}
+.exjob.dim{background:var(--mustard);color:var(--ink);font-weight:700}
+.exarrow{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:0 22px;color:var(--red)}
+.exarrow span{font-size:34px;font-weight:700;line-height:1}
+.exarrow small{font-size:11px;color:var(--dim);margin-top:5px;white-space:nowrap}
+.exsmall{flex:1;background:var(--ink);border-radius:16px;padding:22px 24px;color:#fff}
+.exsmall .exh.sm{color:#fff}
+.exsmall .exsub.sm{color:var(--mustard)}
+.exnote{font-size:13.5px;color:#c9c9d6;margin-top:14px;line-height:1.5}
 
 @page{size:1280px 720px;margin:0}
 @media screen{body{display:flex;flex-direction:column;align-items:center;gap:22px;padding:22px}
@@ -379,11 +406,11 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     <div class="journey">
       <div class="jstep past"><div class="jt">Chat</div><span class="jtag">you ask, it answers</span></div>
       <div class="jarrow">&rarr;</div>
-      <div class="jstep now"><div class="jt">Agent on your laptop</div><span class="jtag">tonight we're here</span></div>
+      <div class="jstep now"><div class="jt">Cowork agent</div><span class="jtag">tonight we're here</span></div>
       <div class="jarrow">&rarr;</div>
       <div class="jstep"><div class="jt">Remote agent</div><span class="jtag">runs without you</span></div>
     </div>
-    <div class="jnote">A chat hands you text. An agent has <b>hands and a memory</b> — it can reach your tools, remember how you work, and do the job. Move it off your laptop and it does that without you watching.</div>
+    <div class="jnote">A chat hands you text. A <b>cowork agent</b> sits next to you — it has hands and a memory, you work on things together, and it gets better at your work every week. A remote agent does one job of that, alone, while you're elsewhere.</div>
     <div class="grow"></div>
     <div class="callout">"Many agents working together" sounds like the top of the ladder. It isn't — <b>that can happen inside any of these.</b></div>
   </div>
@@ -406,16 +433,17 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The ingredients</span></div>
   <div class="wrap">
     <div class="eyebrow">What does an agent need to do the job?</div>
-    <h1>Five things. <b>That's all.</b></h1>
+    <h1>Six things. <b>That's all.</b></h1>
     <div class="needs">
       <div class="need"><div class="ne">🧠</div><div class="nk">Brain</div><div class="nd">Claude, it reads and decides.</div></div>
-      <div class="need"><div class="ne">📖</div><div class="nk">Instructions</div><div class="nd">what you want it to do.</div></div>
-      <div class="need"><div class="ne">📝</div><div class="nk">Memory</div><div class="nd">who you are and how you sound.</div></div>
+      <div class="need"><div class="ne">📖</div><div class="nk">Identity</div><div class="nd">who it is and what its job is.</div></div>
+      <div class="need"><div class="ne">👤</div><div class="nk">Context</div><div class="nd">who you are and how you sound.</div></div>
+      <div class="need"><div class="ne">📝</div><div class="nk">Memory</div><div class="nd">what it keeps from last time.</div></div>
       <div class="need"><div class="ne">🛠️</div><div class="nk">Tools</div><div class="nd">Gmail, Calendar, Notion, what it can reach.</div></div>
       <div class="need"><div class="ne">🎯</div><div class="nk">Goal</div><div class="nd">what a good result looks like.</div></div>
     </div>
     <div class="grow"></div>
-    <div class="callout">You'll set every one of these tonight, in <b>plain English</b>, not code.</div>
+    <div class="callout">You'll set five of these tonight, in <b>plain English</b>, not code. <b>Memory</b> is the one that grows by itself.</div>
   </div>
   <div class="year">2026</div>
 </section>
@@ -431,6 +459,29 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     </div>
     <div class="grow"></div>
     <div class="callout">Which raises the obvious question: <b>how does it connect to Gmail?</b> &nbsp;→ that's next.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The part people skip</span></div>
+  <div class="wrap">
+    <div class="eyebrow">Not the same as knowing who you are</div>
+    <h1>Memory is what it <b>keeps</b></h1>
+    <div class="memcols">
+      <div class="memcol">
+        <div class="memh">Context</div>
+        <p>Who you are, what you do, how you sound. Written once, changes rarely.</p>
+        <div class="memex">"I'm a PM. Short and direct, never bullet points."</div>
+      </div>
+      <div class="memcol hot">
+        <div class="memh">Memory</div>
+        <p>What it holds on to <b>so the next run is better than the last</b>. It grows every week.</p>
+        <div class="memex">"Call with Marta, 24 Jul: pilot agreed, SSO still open."<br><br>"That draft was too long &mdash; she reads on her phone."<br><br>"Priya's legal team only answers in writing."</div>
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Memory is just <b>notes in a folder</b> your agent can read. If you keep notes in Obsidian, that folder already <i>is</i> your agent's memory &mdash; it's markdown files either way.</div>
   </div>
   <div class="year">2026</div>
 </section>
@@ -529,8 +580,8 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     <div class="arch">
 
       <div class="arch-config">
-        <div class="acfg"><span class="chip sm">Role + rules</span><div class="fn">CLAUDE.md</div><div class="ds">how it works</div></div>
-        <div class="acfg"><span class="chip sm">Memory</span><div class="fn">me.md</div><div class="ds">who you are</div></div>
+        <div class="acfg"><span class="chip sm">Identity</span><div class="fn">IDENTITY.md</div><div class="ds">who it is, what it does</div></div>
+        <div class="acfg"><span class="chip sm">Context</span><div class="fn">me.md</div><div class="ds">who you are</div></div>
         <div class="acfg"><span class="chip sm">Goal</span><div class="fn">rubric.md</div><div class="ds">what matters to you</div></div>
       </div>
       <div class="arch-downs"><span>&darr;</span><span>&darr;</span><span>&darr;</span></div>
@@ -723,6 +774,34 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     </div>
     <div class="grow"></div>
     <div class="callout">Honest: a cloud routine really does run with your laptop shut — but it only sees the connectors you set up at <b>claude.ai</b>, never what you connected locally. Closing that gap is the actual work.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The move that makes it easy</span></div>
+  <div class="wrap">
+    <div class="eyebrow">How a remote agent actually gets built</div>
+    <h1>You don't start one. You <b>cut one out.</b></h1>
+    <div class="extract">
+      <div class="exbig">
+        <div class="exh">Your cowork agent</div>
+        <div class="exsub">knows you, your customers, your tone, a year of notes</div>
+        <div class="exjobs">
+          <span class="exjob">briefing</span><span class="exjob">follow-ups</span>
+          <span class="exjob dim">customer one-pagers</span><span class="exjob">research</span>
+          <span class="exjob">CRM notes</span><span class="exjob">outreach</span>
+        </div>
+      </div>
+      <div class="exarrow"><span>&rarr;</span><small>lift one job out</small></div>
+      <div class="exsmall">
+        <div class="exh sm">One remote agent</div>
+        <div class="exsub sm">customer one-pagers</div>
+        <div class="exnote">Runs on its own.<br>Share it with the team.</div>
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Building a production agent from a blank page is hard. Lifting one job out of an agent that <b>already does it well with you</b> is not &mdash; the hard part, knowing your work, is already done.</div>
   </div>
   <div class="year">2026</div>
 </section>
