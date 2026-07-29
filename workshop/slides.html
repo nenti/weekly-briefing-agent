@@ -269,13 +269,50 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .vpill .ico{margin:0}
 .vpill .ico svg{width:22px;height:22px}
 
+
+/* ── intro block (from Vidushi's v2) ── */
+.journey{display:flex;align-items:stretch;gap:0;margin-top:40px;flex-wrap:nowrap}
+.jstep{flex:1 1 0;display:flex;flex-direction:column;justify-content:center;background:#fff;border:2px solid var(--line);border-radius:12px;padding:18px 16px;text-align:center;font-size:15px;line-height:1.25}
+.jstep .jt{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--ink)}
+.jstep.past{opacity:.55}
+.jstep.now{border-color:var(--red);background:#fff7f8}
+.jstep.now .jt{color:var(--red)}
+.jstep .jtag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
+.jstep.past .jtag{color:var(--dim)}
+.jstep.now .jtag{color:var(--red)}
+.jarrow{flex:0 0 auto;display:flex;align-items:center;color:var(--red);font-size:22px;font-weight:700;padding:0 9px}
+.learn{display:flex;flex-direction:column;gap:11px;margin-top:64px}
+.lrn{display:flex;gap:16px;align-items:baseline;background:#fff;border:1px solid #ececec;border-radius:12px;padding:14px 22px}
+.lrn .m{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--red);flex:0 0 auto}
+.lrn .t{font-size:17px;line-height:1.4}
+.lrn .t b{font-weight:700}
+.gloss{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-top:60px}
+.gl{display:flex;gap:12px;align-items:baseline;background:#fff;border:1px solid #ececec;border-radius:12px;padding:14px 20px}
+.gl .w{font-family:var(--mono);font-weight:700;font-size:16px;color:var(--red);flex:0 0 122px}
+.gl .d{font-size:15.5px;color:#444;line-height:1.4}
+.gl.wide{grid-column:1 / -1}
+.needs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:76px}
+.need{background:#fff;border:1px solid #ececec;border-radius:12px;padding:18px 15px;text-align:center}
+.need .ne{font-size:30px;line-height:1;margin-bottom:10px}
+.need .nk{font-family:var(--serif);font-weight:900;font-size:18px;color:var(--red);margin-bottom:6px}
+.need .nd{font-size:13px;color:#444;line-height:1.35}
+
+.apidemo{display:flex;gap:26px;margin-top:24px;align-items:flex-start}
+.apicard{flex:0 0 470px;background:#fff;border:2px solid var(--line);border-radius:14px;overflow:hidden}
+.apiu{font-family:var(--mono);font-size:12px;color:var(--dim);background:#f6f6f8;padding:9px 16px;border-bottom:1px solid var(--line)}
+.apicode{font-family:var(--mono);font-size:14px;line-height:1.6;color:var(--ink);padding:16px 18px;margin:0;white-space:pre}
+.apicap{font-size:13px;color:var(--dim);padding:0 18px 15px}
+.apiside{flex:1;font-size:17px;line-height:1.5;color:#333}
+.apiside b{color:var(--ink);font-weight:700}
+
+.cols.three{grid-template-columns:repeat(3,1fr)}
+
 @page{size:1280px 720px;margin:0}
 @media screen{body{display:flex;flex-direction:column;align-items:center;gap:22px;padding:22px}
   .slide{box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,0,.5)}}
 @media print{.slide{page-break-after:always}}
 </style>
 
-<!-- 1 · COVER -->
 <section class="slide titlecover">
   <div class="cw">Co-Work &amp;</div>
   <div class="eb">Hands-On with Claude Code &middot; 31 July 2026 &middot; CIC Berlin</div>
@@ -287,7 +324,23 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="conf">A Co-Work &amp; session &middot; hosted by Vidushi Malhan</div>
 </section>
 
-<!-- 2 · THE PROMISE -->
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Where we're taking you</span></div>
+  <div class="wrap">
+    <div class="eyebrow">The next two hours</div>
+    <h1>By the end of tonight, <b>you'll get</b></h1>
+    <div class="learn">
+      <div class="lrn"><span class="m">01</span><span class="t"><b>What an AI agent actually is</b>, and why it's not just ChatGPT.</span></div>
+      <div class="lrn"><span class="m">02</span><span class="t"><b>How an agent reaches your tools</b>, your email, your calendar, your notes.</span></div>
+      <div class="lrn"><span class="m">03</span><span class="t"><b>How to build one yourself</b>, tonight, on your own laptop, no code.</span></div>
+      <div class="lrn"><span class="m">04</span><span class="t"><b>How to reuse the same idea</b> for dozens of other workflows.</span></div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">No jargon yet. We'll take it one step at a time, <b>everyone leaves knowing where we went.</b></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The promise</span></div>
   <div class="wrap">
@@ -300,7 +353,88 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 3 · THE ONE IDEA -->
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The language</span></div>
+  <div class="wrap">
+    <div class="eyebrow">So no word tonight is a surprise</div>
+    <h1>Five words you'll <b>know by the end</b></h1>
+    <div class="gloss">
+      <div class="gl"><span class="w">Prompt</span><span class="d">one conversation, you ask, it answers once.</span></div>
+      <div class="gl"><span class="w">Agent</span><span class="d">repeated work, set up once, runs every time.</span></div>
+      <div class="gl"><span class="w">Tool</span><span class="d">something the AI can use: Gmail, Calendar, Notion.</span></div>
+      <div class="gl"><span class="w">MCP</span><span class="d">the connector that plugs a tool into the AI.</span></div>
+      <div class="gl wide"><span class="w">Claude Code</span><span class="d">where we build the agent tonight, plain English in, working agent out.</span></div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Every time one of these comes up later, you'll already have it. <b>No catching up.</b></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The evolution</span></div>
+  <div class="wrap">
+    <div class="eyebrow">Where you are, and where we're going</div>
+    <h1>You've used AI. <b>Tonight you level up.</b></h1>
+    <div class="journey">
+      <div class="jstep past"><div class="jt">Chat</div><span class="jtag">you ask, it answers</span></div>
+      <div class="jarrow">&rarr;</div>
+      <div class="jstep now"><div class="jt">Agent on your laptop</div><span class="jtag">tonight we're here</span></div>
+      <div class="jarrow">&rarr;</div>
+      <div class="jstep"><div class="jt">Remote agent</div><span class="jtag">runs without you</span></div>
+    </div>
+    <div class="jnote">A chat hands you text. An agent has <b>hands and a memory</b> — it can reach your tools, remember how you work, and do the job. Move it off your laptop and it does that without you watching.</div>
+    <div class="grow"></div>
+    <div class="callout">"Many agents working together" sounds like the top of the ladder. It isn't — <b>that can happen inside any of these.</b></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · prompt vs agent</span></div>
+  <div class="wrap">
+    <div class="eyebrow">The difference that matters</div>
+    <h1>A prompt <b>answers once.</b><br>An agent <b>runs every time.</b></h1>
+    <div class="lead">You don't re-explain yourself each morning. You set it up once — who it works
+    for, what matters, what it can touch — and it does the job again next Monday, and the one after.</div>
+    <div class="grow"></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The ingredients</span></div>
+  <div class="wrap">
+    <div class="eyebrow">What does an agent need to do the job?</div>
+    <h1>Five things. <b>That's all.</b></h1>
+    <div class="needs">
+      <div class="need"><div class="ne">🧠</div><div class="nk">Brain</div><div class="nd">Claude, it reads and decides.</div></div>
+      <div class="need"><div class="ne">📖</div><div class="nk">Instructions</div><div class="nd">what you want it to do.</div></div>
+      <div class="need"><div class="ne">📝</div><div class="nk">Memory</div><div class="nd">who you are and how you sound.</div></div>
+      <div class="need"><div class="ne">🛠️</div><div class="nk">Tools</div><div class="nd">Gmail, Calendar, Notion, what it can reach.</div></div>
+      <div class="need"><div class="ne">🎯</div><div class="nk">Goal</div><div class="nd">what a good result looks like.</div></div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">You'll set every one of these tonight, in <b>plain English</b>, not code.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The bridge</span></div>
+  <div class="wrap">
+    <div class="eyebrow">The one thing that makes it useful</div>
+    <h1>The difference is <b>tools.</b></h1>
+    <div class="cols">
+      <div class="col"><h3>Without tools</h3><p>AI can answer questions, write text, brainstorm ideas.<br><br>Helpful, but it can't touch <b>your</b> world.</p></div>
+      <div class="col" style="border-color:var(--red)"><h3>With tools</h3><p>It can read your Gmail, check your Calendar, create documents, update Notion, search your sheets.<br><br>Now it works on <b>your actual week.</b></p></div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Which raises the obvious question: <b>how does it connect to Gmail?</b> &nbsp;→ that's next.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The one idea</span></div>
   <div class="wrap">
@@ -318,39 +452,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 4 · ANATOMY -->
-<section class="slide">
-  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · anatomy</span></div>
-  <div class="wrap">
-    <div class="eyebrow">What's inside an agent</div>
-    <h1>Five parts. That's the <b>whole machine.</b></h1>
-    <div class="cards">
-      <div class="acard"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></span><div class="k">Role</div><div class="d">Who it is. "My briefing assistant."</div></div>
-      <div class="acard"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 6h13M8 12h13M8 18h13M3.6 6h.01M3.6 12h.01M3.6 18h.01"/></svg></span><div class="k">Instructions</div><div class="d">How it works. The standing rules.</div></div>
-      <div class="acard"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><div class="k">Memory</div><div class="d">What it knows about you and your world.</div></div>
-      <div class="acard"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 2v6M15 2v6"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v5"/></svg></span><div class="k">Tools</div><div class="d">What it can reach — files, email, calendar.</div></div>
-      <div class="acard"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span><div class="k">Goal</div><div class="d">What "done" looks like this run.</div></div>
-    </div>
-    <div class="grow"></div>
-    <div class="callout">You'll set every one of these in <b>plain English</b> tonight — not in code.</div>
-  </div>
-  <div class="year">2026</div>
-</section>
-
-<!-- 5 · PROMPT VS AGENT -->
-<section class="slide">
-  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · prompt vs agent</span></div>
-  <div class="wrap">
-    <div class="eyebrow">The difference that matters</div>
-    <h1>A prompt <b>answers once.</b><br>An agent <b>runs every time.</b></h1>
-    <div class="lead">You don't re-explain yourself each morning. You set it up once — who it works
-    for, what matters, what it can touch — and it does the job again next Monday, and the one after.</div>
-    <div class="grow"></div>
-  </div>
-  <div class="year">2026</div>
-</section>
-
-<!-- 6 · API + MCP -->
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · the plug</span></div>
   <div class="wrap">
@@ -366,7 +467,32 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 7 · LIVE DEMO (wow #1) -->
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">A real one</span></div>
+  <div class="wrap">
+    <div class="eyebrow">So the word stops being abstract</div>
+    <h1>This is what an <b>API</b> actually looks like</h1>
+    <div class="apidemo">
+      <div class="apicard">
+        <div class="apiu">openholidays.eu &middot; free, no key</div>
+        <pre class="apicode">{
+  "name": "Tag der Deutschen Einheit",
+  "startDate": "2026-10-03",
+  "nationwide": true
+}</pre>
+        <div class="apicap">Public holidays in Germany. Written for machines, not for you.</div>
+      </div>
+      <div class="apiside">
+        <p><b>You never have to read this.</b> You tell Claude Code what you want — <i>"add the next public holiday to my briefing"</i> — and it deals with the format.</p>
+        <p style="margin-top:14px">Some tools need a <b>key</b> first: a password for your agent. You get it on the tool's own site, usually under <span class="mono">Developers</span> or <span class="mono">API</span>, and paste it in once.</p>
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">An <b>MCP</b> is just this, pre-wired — someone already did the plumbing so you only have to click connect.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
 <section class="slide section">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Live · watch this</span></div>
   <div class="wrap center">
@@ -378,7 +504,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 8 · WHAT WE BUILD -->
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">What we build</span></div>
   <div class="wrap">
@@ -396,7 +521,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 9 · TARGET ARCHITECTURE -->
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The whole machine</span></div>
   <div class="wrap">
@@ -439,7 +563,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 10 · HANDS-ON steps 1-2 -->
 <section class="slide">
   <div class="band hands"><span class="wm">⌨️ HANDS-ON</span><span class="bd">Get in · see your week</span></div>
   <div class="wrap">
@@ -454,7 +577,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 10 · HANDS-ON step 3 -->
 <section class="slide">
   <div class="band hands"><span class="wm">⌨️ HANDS-ON</span><span class="bd">Make it yours</span></div>
   <div class="wrap">
@@ -470,7 +592,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 11 · HANDS-ON steps 4-5 (wow #2) -->
 <section class="slide">
   <div class="band hands"><span class="wm">⌨️ HANDS-ON</span><span class="bd">Run it · make it beautiful</span></div>
   <div class="wrap">
@@ -487,7 +608,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 12b · SUCCESS -->
 <section class="slide section">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">You did it</span></div>
   <div class="wrap">
@@ -513,15 +633,14 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 12 · MAKE IT REAL -->
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Make it real</span></div>
   <div class="wrap">
     <div class="eyebrow">Two upgrades — pick one</div>
     <h1>Take it off the sample data</h1>
-    <div class="cols">
-      <div class="col"><h3>A · Your real week</h3><p>Connect the Gmail + Calendar plug (one click, in your browser). Change one line — sample files → <b>your last 7 days</b>. Re-run. Same briefing, your real inbox. <br><span style="color:var(--dim);font-size:13.5px">Use the throwaway Gmail first.</span></p></div>
-      <div class="col"><h3>B · Every Monday</h3><p>Ask Claude Code to <span class="mono">/schedule</span> a run every Monday at 08:00. Your briefing is waiting before you sit down.</p></div>
+    <div class="cols three"><div class="col"><h3>A &middot; Your real week</h3><p>Connect the Gmail + Calendar plug (one click, in your browser). Change one line &mdash; sample files to <b>your last 7 days</b>. Re-run.<br><span style="color:var(--dim);font-size:13.5px">Use the throwaway account first.</span></p></div>
+      <div class="col"><h3>B &middot; Every Monday</h3><p>Set it up as a <b>routine</b> and it runs on its own schedule &mdash; your briefing is waiting before you sit down.</p></div>
+      <div class="col"><h3>C &middot; Off your laptop</h3><p>Have it publish the briefing as an <b>artifact</b> instead of a local file, and you can open it from your phone.</p></div>
     </div>
     <div class="grow"></div>
     <div class="callout">Honest: a local schedule runs <b>while your laptop is on.</b> Fully hands-off in the cloud is the step beyond tonight — and it's a real one.</div>
@@ -529,7 +648,46 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- INSPIRATION · other use cases -->
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Part two</span></div>
+  <div class="wrap">
+    <div class="eyebrow">A production agent &mdash; same three moves, a year of iteration</div>
+    <h1>One line in. A whole <b>customer package</b> out.</h1>
+    <div class="vflow">
+      <div class="vbox"><div class="vt">You type</div><div class="vs">a company name<br>and their website</div></div>
+      <div class="varrow">&rarr;</div>
+      <div class="vbox mid"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><div class="vt">The agent</div><div class="vs">researches them, works out what they'd care about, <b>writes and designs</b> it</div></div>
+      <div class="varrow">&rarr;</div>
+      <div class="vbox">
+        <div class="vout">
+          <div class="vpill"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span>A tailored <b>one-pager</b></span></div>
+          <div class="vpill"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z"/></svg></span><span>A <b>video</b>, with voiceover</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout">Same <b>read &rarr; judge &rarr; write</b>, pointed at a bigger job. I'll show you a real one running &mdash; <b>then we build a small version of it together.</b></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band hands"><span class="wm">&#9000; HANDS-ON</span><span class="bd">Part two &middot; build the video agent</span></div>
+  <div class="wrap">
+    <div class="eyebrow g">Together &mdash; if you're through the briefing</div>
+    <h1>Build one that <b>talks</b></h1>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div class="t"><b>Pick any company</b> &mdash; yours, a client's, one you admire. Give the agent the name and the website.</div></div>
+      <div class="step"><div class="n">02</div><div class="t"><b>Let it do the reading.</b> It looks at the site, works out what they do and who they sell to, and writes a short script.</div></div>
+      <div class="step"><div class="n">03</div><div class="t"><b>Give it a voice.</b> ElevenLabs turns the script into a real voiceover &mdash; that's a tool with an <span class="mono">API key</span>, exactly like we just talked about.</div></div>
+      <div class="step"><div class="n">04</div><div class="t"><b>Out comes a video</b> you can actually send someone.</div></div>
+    </div>
+    <div class="grow"></div>
+    <div class="callout g">Different job, <b>same three moves.</b> Once you see that, you can point an agent at anything.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Inspiration</span></div>
   <div class="wrap">
@@ -548,31 +706,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- VIDEO AGENT EXAMPLE -->
-<section class="slide">
-  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Beyond tonight</span></div>
-  <div class="wrap">
-    <div class="eyebrow">A production agent &mdash; same three moves, a year of iteration</div>
-    <h1>One line in. A whole <b>customer package</b> out.</h1>
-    <div class="vflow">
-      <div class="vbox"><div class="vt">You type</div><div class="vs">a company name<br>and their website</div></div>
-      <div class="varrow">&rarr;</div>
-      <div class="vbox mid"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><div class="vt">The agent</div><div class="vs">researches them, works out what they'd care about, <b>writes and designs</b> it</div></div>
-      <div class="varrow">&rarr;</div>
-      <div class="vbox">
-        <div class="vout">
-          <div class="vpill"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span>A tailored <b>one-pager</b></span></div>
-          <div class="vpill"><span class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5z"/></svg></span><span>A <b>video</b>, with voiceover</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="grow"></div>
-    <div class="callout">I'll show you a real one running. It's the same <b>read &rarr; judge &rarr; write</b> you just built &mdash; pointed at a bigger job.</div>
-  </div>
-  <div class="year">2026</div>
-</section>
-
-<!-- LOCAL VS REMOTE -->
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The outlook</span></div>
   <div class="wrap">
@@ -594,7 +727,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 15 · NYXORY + ARGUS -->
 <section class="slide section">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">What I actually do</span></div>
   <div class="wrap">
@@ -610,7 +742,6 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   <div class="year">2026</div>
 </section>
 
-<!-- 14 · CLOSE -->
 <section class="slide cover">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">× nyxory · thank you</span></div>
   <div class="wrap center">
