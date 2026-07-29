@@ -271,13 +271,14 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 
 
 /* ── intro block (from Vidushi's v2) ── */
-.journey{display:flex;align-items:stretch;gap:0;margin-top:40px;flex-wrap:nowrap}
-.jstep{flex:1 1 0;display:flex;flex-direction:column;justify-content:center;background:#fff;border:2px solid var(--line);border-radius:12px;padding:18px 16px;text-align:center;font-size:15px;line-height:1.25}
-.jstep .jt{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--ink)}
+.journey{display:flex;align-items:stretch;gap:0;margin-top:34px;flex-wrap:nowrap}
+.jstep{flex:1 1 0;display:flex;flex-direction:column;background:#fff;border:2px solid var(--line);border-radius:14px;padding:22px 20px;text-align:center;font-size:15px;line-height:1.25}
+.jstep .jt{font-family:var(--serif);font-weight:700;font-size:21px;color:var(--ink)}
+.jstep .jd{font-size:14px;line-height:1.45;color:#555;margin-top:9px}
 .jstep.past{opacity:.55}
 .jstep.now{border-color:var(--red);background:#fff7f8}
 .jstep.now .jt{color:var(--red)}
-.jstep .jtag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
+.jstep .jtag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:12px}
 .jstep.past .jtag{color:var(--dim)}
 .jstep.now .jtag{color:var(--red)}
 .jarrow{flex:0 0 auto;display:flex;align-items:center;color:var(--red);font-size:22px;font-weight:700;padding:0 9px}
@@ -419,13 +420,12 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     <div class="eyebrow">Where you are, and where we're going</div>
     <h1>You've used AI. <b>Tonight you level up.</b></h1>
     <div class="journey">
-      <div class="jstep past"><div class="jt">Chat</div><span class="jtag">you ask, it answers</span></div>
+      <div class="jstep past"><div class="jt">Chat</div><div class="jd">You ask, it answers. Text comes back &mdash; nothing else happens.</div></div>
       <div class="jarrow">&rarr;</div>
-      <div class="jstep now"><div class="jt">Cowork agent</div><span class="jtag">tonight we're here</span></div>
+      <div class="jstep now"><div class="jt">Cowork agent</div><div class="jd">Hands and a memory. You work on things together, and it gets better at your work every week.</div><span class="jtag">tonight we're here</span></div>
       <div class="jarrow">&rarr;</div>
-      <div class="jstep"><div class="jt">Remote agent</div><span class="jtag">runs without you</span></div>
+      <div class="jstep"><div class="jt">Remote agent</div><div class="jd">Takes one of those jobs and does it alone, while you're somewhere else.</div></div>
     </div>
-    <div class="jnote">A chat hands you text. A <b>cowork agent</b> sits next to you — it has hands and a memory, you work on things together, and it gets better at your work every week. A remote agent does one job of that, alone, while you're elsewhere.</div>
     <div class="grow"></div>
     <div class="callout">"Many agents working together" sounds like the top of the ladder. It isn't — <b>that can happen inside any of these.</b></div>
   </div>
