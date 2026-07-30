@@ -356,6 +356,16 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 @media screen{body{display:flex;flex-direction:column;align-items:center;gap:22px;padding:22px}
   .slide{box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,0,.5)}}
 @media print{.slide{page-break-after:always}}
+/* ── folder-is-memory slide ── */
+.fmem{display:flex;align-items:stretch;gap:14px;margin-top:24px}
+.fmem-tool{flex:1;background:#fff;border:2px solid var(--line);border-radius:14px;padding:20px 22px}
+.fmem-tool .tn{font-family:var(--serif);font-weight:700;font-size:21px;margin-bottom:7px}
+.fmem-tool p{font-size:14.5px;color:#444;line-height:1.45}
+.fmem-arr{align-self:center;font-size:26px;color:var(--dim)}
+.fmem-folder{flex:1.25;background:var(--ink);border-radius:14px;padding:20px 24px;color:#fff}
+.fmem-folder .fh{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--mustard);margin-bottom:10px}
+.fmem-folder pre{font-family:var(--mono);font-size:13.5px;line-height:1.75;color:#e8e8ee}
+.fmem-note{font-size:16.5px;color:var(--ink);line-height:1.5;margin-top:20px;max-width:820px}
 /* ── api qr ── */
 .apiqr{display:flex;align-items:center;gap:14px;margin-top:18px}
 .apiqr img{width:108px;height:108px;border:1px solid var(--line);border-radius:10px}
@@ -546,6 +556,29 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
     </div>
     <div class="grow"></div>
     <div class="callout">Memory is just <b>notes in a folder</b> your agent can read. If you keep notes in Obsidian, that folder already <i>is</i> your agent's memory &mdash; it's markdown files either way.</div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Where it lives</span></div>
+  <div class="wrap">
+    <div class="eyebrow">Why every agent gets its own folder</div>
+    <h1>The folder <b>is</b> the memory</h1>
+    <div class="fmem">
+      <div class="fmem-tool"><div class="tn">Claude Code</div><p>Your agent <b>works</b> here. It reads the folder before every run, and writes back what it learns.</p></div>
+      <div class="fmem-arr">&#8644;</div>
+      <div class="fmem-folder"><div class="fh">&#128193; weekly-briefing-agent/</div><pre>IDENTITY.md   who it is
+me.md         who you are
+rubric.md     your standard
+vault/        what it learns,
+              run by run</pre></div>
+      <div class="fmem-arr">&#8644;</div>
+      <div class="fmem-tool"><div class="tn">Obsidian</div><p>Same folder, <b>second window</b>. Read your agent&rsquo;s memory like a wiki &mdash; and edit it. Your edit is in its head next run.</p></div>
+    </div>
+    <p class="fmem-note">Claude itself forgets everything when the chat ends. Whatever should survive must be <b>a file in the folder</b> &mdash; open the folder, and the agent wakes up knowing it.</p>
+    <div class="grow"></div>
+    <div class="callout">Memory is <b>folder-specific</b> &mdash; that&rsquo;s why it&rsquo;s one folder per agent. Open the folder &rarr; that agent, that memory. Two agents in one folder share one brain, and confuse each other.</div>
   </div>
   <div class="year">2026</div>
 </section>
