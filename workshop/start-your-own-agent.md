@@ -72,7 +72,35 @@ Put an example of the finished thing in the project — a page you like, a repor
 shape, even a rough sketch — and tell `IDENTITY.md` to open it first and match that standard.
 Without a target the agent invents its own, and its own is average by construction.
 
-## 6 · Run it, then fix the instructions — not the output
+## 6 · Optional, but the compounding part: give it a vault
+
+The workshop agent starts fresh every run. The strongest agents don't — they keep a
+**vault**: a folder of markdown notes that grows with every run.
+
+```
+vault/
+  runs/2026-08-04.md        what it did, what you corrected, why
+  people/marta-kern.md      what it has learned about the people it deals with
+```
+
+Two lines in `IDENTITY.md` make it real:
+
+> Before you start, read the vault — it's what you know beyond this week's data.
+> When you're done, write down what you learned and what I corrected.
+
+That's the difference between a tool and a colleague: *"last time you said this draft
+was too formal"* only happens if somewhere, a note says so.
+
+Practical notes:
+
+- It's just markdown files. Point [Obsidian](https://obsidian.md) (free) at the folder
+  and you can read your agent's memory like a wiki — link notes with `[[wikilinks]]`
+  and the graph view shows how they connect.
+- Skip it on day one if you like. From week two it's the biggest lever there is: an
+  agent with a vault gets better at **your** work every run; one without starts from
+  zero every time.
+
+## 7 · Run it, then fix the instructions — not the output
 
 > Do your job. Read what you're supposed to read, apply my rubric, produce the result.
 
@@ -82,7 +110,7 @@ after that.
 
 Two or three rounds of this and it starts feeling like yours.
 
-## 7 · Only then, let it off the leash
+## 8 · Only then, let it off the leash
 
 In this order — each step earns the next:
 
@@ -103,7 +131,7 @@ sample data and reports it as your real week is worse than no agent at all.
 
 ```
 folder  →  git repo  →  IDENTITY.md (who it is)  →  a source  →  an example of good
-        →  run  →  fix the instructions  →  schedule  →  trust it with more
+        →  a vault that grows  →  run  →  fix the instructions  →  schedule  →  trust it with more
 ```
 
-Skipping straight to step 7 is how people end up with an agent nobody believes.
+Skipping straight to step 8 is how people end up with an agent nobody believes.
