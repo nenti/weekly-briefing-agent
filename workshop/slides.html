@@ -356,6 +356,12 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 @media screen{body{display:flex;flex-direction:column;align-items:center;gap:22px;padding:22px}
   .slide{box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,0,.5)}}
 @media print{.slide{page-break-after:always}}
+/* ── slide numbers ── */
+body{counter-reset:slide}
+.slide{counter-increment:slide}
+.slide::after{content:counter(slide);position:absolute;bottom:16px;left:26px;
+  font-family:var(--sans);font-size:12px;font-weight:600;color:#c5c5cd;letter-spacing:.05em}
+.slide.cover::after{content:none}
 /* ── folder-is-memory slide ── */
 .fmem{display:flex;align-items:stretch;gap:14px;margin-top:24px}
 .fmem-tool{flex:1;background:#fff;border:2px solid var(--line);border-radius:14px;padding:20px 22px}
@@ -366,6 +372,9 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 .fmem-folder .fh{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--mustard);margin-bottom:10px}
 .fmem-folder pre{font-family:var(--mono);font-size:13.5px;line-height:1.75;color:#e8e8ee}
 .fmem-note{font-size:16.5px;color:var(--ink);line-height:1.5;margin-top:20px;max-width:820px}
+.fmem-look{display:flex;align-items:center;gap:12px;margin-top:14px}
+.fmem-look .chip{white-space:nowrap}
+.fmem-look .fl-t{font-size:14.5px;color:var(--ink);line-height:1.45}
 /* ── api qr ── */
 .apiqr{display:flex;align-items:center;gap:14px;margin-top:18px}
 .apiqr img{width:108px;height:108px;border:1px solid var(--line);border-radius:10px}
@@ -577,6 +586,7 @@ vault/        what it learns,
       <div class="fmem-tool"><div class="tn">Obsidian</div><p>Same folder, <b>second window</b>. Read your agent&rsquo;s memory like a wiki &mdash; and edit it. Your edit is in its head next run.</p></div>
     </div>
     <p class="fmem-note">Claude itself forgets everything when the chat ends. Whatever should survive must be <b>a file in the folder</b> &mdash; open the folder, and the agent wakes up knowing it.</p>
+    <div class="fmem-look"><span class="chip sm">Look at it</span><span class="fl-t">Type <span class="mono"><b>/memory</b></span> in Claude Code &mdash; its notebook for the folder you&rsquo;re in. As you work together it adds its own notes there, under <span class="mono">~/.claude/projects/&lt;this folder&gt;/memory/</span>.</span></div>
     <div class="grow"></div>
     <div class="callout">Memory is <b>folder-specific</b> &mdash; that&rsquo;s why it&rsquo;s one folder per agent. Open the folder &rarr; that agent, that memory. Two agents in one folder share one brain, and confuse each other.</div>
   </div>
