@@ -43,7 +43,9 @@ rubric → write where you already look.**
 
 ## Build it
 
-1. Clone this project and open the folder in Claude Code.
+1. Clone this project and open the folder in Claude Code. Best as your own copy — ask it to
+   create a private repo named `yourname-briefing-agent` on your GitHub and push there; that
+   keeps your agent versioned and ready for cloud runs later.
 2. **Drop in your About me.** Paste the profile Claude wrote for you into `me.md`.
 3. **Build your agent.** Paste the prompt from
    [`workshop/build-your-agent-prompt.md`](workshop/build-your-agent-prompt.md). It asks

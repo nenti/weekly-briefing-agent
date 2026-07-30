@@ -136,7 +136,11 @@ a{color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid 
     <div class="body">
       <p>Copy the starter project to your machine and open that folder in Claude Code. You don't
       have to know any git — just ask:</p>
-      <div class="say"><div class="k">SAY THIS</div><p>Clone github.com/nenti/weekly-briefing-agent into a new folder and open it.</p></div>
+      <div class="say"><div class="k">SAY THIS</div><p>Clone github.com/nenti/weekly-briefing-agent into a new folder called <i>yourname</i>-briefing-agent, then make it mine: create a private repo with the same name on my own GitHub account, connect the folder to it and push. Help me log in to GitHub if needed.</p></div>
+      <p>The second half matters: from here on this is <b>your</b> agent, so it lives in <b>your</b>
+      repo. Every change to its instructions is saved and reversible &mdash; and a repo on your own
+      account is what keeps the project in sync wherever you open it, and what lets the agent run
+      in the cloud later (step 8).</p>
       <p>Then look at what you've got. <span class="mono">data/inbox.md</span> is a week of
       emails, <span class="mono">data/calendar.md</span> is the week ahead. That's your agent's
       world for now — no login, nothing connected, nothing at risk.</p>
@@ -247,7 +251,7 @@ a{color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid 
       and it runs while your machine is on.</p>
       <h3>In the cloud</h3>
       <p>A <b>routine</b> runs in Anthropic's cloud on its own schedule — laptop shut, nothing
-      running locally. It gets its own checkout of your project, so push it to GitHub first.</p>
+      running locally. It gets its own checkout of your project from GitHub &mdash; which is exactly why step 2 put the repo on your account. You are already set up for this.</p>
       <div class="watch"><b>The catch worth knowing up front:</b> a cloud routine only has the
       connectors you've set up at <span class="mono">claude.ai/customize/connectors</span> — what
       you connected locally does not travel with it, and neither do local files outside the repo.
