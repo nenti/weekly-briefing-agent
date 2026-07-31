@@ -361,8 +361,10 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
 /* ── blueprint photo with white fade ── */
 .bpfade{position:absolute;right:0;bottom:0;width:66%;height:82%;z-index:0;
   background-image:var(--bpimg);background-size:cover;background-position:right bottom;
-  -webkit-mask-image:linear-gradient(115deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.72) 42%,#000 74%);
-  mask-image:linear-gradient(115deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.72) 42%,#000 74%)}
+  -webkit-mask-image:linear-gradient(115deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.72) 42%,#000 74%),linear-gradient(to right,rgba(0,0,0,0) 0%,#000 26%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(115deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.72) 42%,#000 74%),linear-gradient(to right,rgba(0,0,0,0) 0%,#000 26%);
+  mask-composite:intersect}
 .bpfade.b2{background-image:var(--bpimg2)}
 .bpfade::after{content:"";position:absolute;inset:0;
   background:linear-gradient(to bottom,var(--paper) 0%,rgba(250,250,250,0) 36%)}
