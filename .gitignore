@@ -6,3 +6,6 @@ workshop/deck-review.pdf
 
 # macOS noise
 .DS_Store
+
+# stage render - lives locally and in the vault, not in the clone
+workshop/slides.pdf
