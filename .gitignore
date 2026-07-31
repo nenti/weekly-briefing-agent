@@ -3,3 +3,6 @@ briefing.html
 
 # rendered review artifact
 workshop/deck-review.pdf
+
+# macOS noise
+.DS_Store
