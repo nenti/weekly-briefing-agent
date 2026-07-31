@@ -363,11 +363,11 @@ h1 .mono{font-family:var(--mono);background:none;color:inherit;padding:0}
   background-image:var(--bpimg);background-size:100% 100%}
 .bpfade.b2{background-image:var(--bpimg2)}
 .wrap{position:relative;z-index:1}
+/* ── ingredient tracker (slides 9-14) ── */
+.ing{position:absolute;top:42px;right:26px;display:flex;gap:7px;z-index:2}
+.ing span{font-size:16px;opacity:.18;filter:grayscale(1)}
+.ing span.on{opacity:1;filter:none}
 /* ── tool icon rows + three moves ── */
-.toolrow{display:flex;gap:14px;margin:2px 0 12px}
-.toolrow svg{width:26px;height:26px;stroke:var(--red);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.toolrow.grey svg{stroke:#b9b9c2}
-.ne svg{width:26px;height:26px;stroke:var(--red);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .moves{display:flex;align-items:stretch;gap:14px;margin-top:34px}
 .mv{flex:1;background:#fff;border:2px solid var(--line);border-radius:16px;padding:30px 24px;text-align:center}
 .mv.hot{border-color:var(--red)}
@@ -478,6 +478,19 @@ body{counter-reset:slide}
 </section>
 
 <section class="slide">
+  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · prompt vs agent</span></div>
+  <div class="bpfade b2"></div>
+  <div class="wrap">
+    <div class="eyebrow">The difference that matters</div>
+    <h1>A prompt <b>answers once.</b><br>An agent <b>runs every time.</b></h1>
+    <div class="lead" style="max-width:560px">You don't re-explain yourself each morning. You set it up once — who it works
+    for, what matters, what it can touch — and it does the job again next Monday, and the one after.</div>
+    <div class="grow"></div>
+  </div>
+  <div class="year">2026</div>
+</section>
+
+<section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The evolution</span></div>
   <div class="wrap">
     <div class="eyebrow">Where you are, and where we're going</div>
@@ -491,19 +504,6 @@ body{counter-reset:slide}
     </div>
     <div class="grow"></div>
     <div class="callout">A <b>multi-agent system</b> — several agents splitting the work between them — sounds like the top of the ladder. It isn't: <b>that can happen inside any of these three.</b></div>
-  </div>
-  <div class="year">2026</div>
-</section>
-
-<section class="slide">
-  <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · prompt vs agent</span></div>
-  <div class="bpfade b2"></div>
-  <div class="wrap">
-    <div class="eyebrow">The difference that matters</div>
-    <h1>A prompt <b>answers once.</b><br>An agent <b>runs every time.</b></h1>
-    <div class="lead" style="max-width:560px">You don't re-explain yourself each morning. You set it up once — who it works
-    for, what matters, what it can touch — and it does the job again next Monday, and the one after.</div>
-    <div class="grow"></div>
   </div>
   <div class="year">2026</div>
 </section>
@@ -542,12 +542,12 @@ body{counter-reset:slide}
     <div class="eyebrow">What does an agent need to do the job?</div>
     <h1>Six things. <b>That's all.</b></h1>
     <div class="needs">
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a3.2 3.2 0 0 0-5.9 1.6 3.4 3.4 0 0 0-2.3 3.2c0 .8.3 1.6.8 2.2a3.4 3.4 0 0 0 2 5.6A3.3 3.3 0 0 0 12 19.5z"/><path d="M12 4.5a3.2 3.2 0 0 1 5.9 1.6 3.4 3.4 0 0 1 2.3 3.2c0 .8-.3 1.6-.8 2.2a3.4 3.4 0 0 1-2 5.6A3.3 3.3 0 0 1 12 19.5z"/></svg></div><div class="nk">Brain</div><div class="nd">Claude, it reads and decides.</div></div>
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 5h7a3 3 0 0 1 3 3 3 3 0 0 1 3-3h7v13h-7a3 3 0 0 0-3 3 3 3 0 0 0-3-3H2z"/><path d="M12 8v13"/></svg></div><div class="nk">Identity</div><div class="nd">who it is and what its job is.</div></div>
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></div><div class="nk">Context</div><div class="nd">who you are and how you sound.</div></div>
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14v18H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><div class="nk">Memory</div><div class="nd">what it keeps from last time.</div></div>
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 5.4L3 17.4V21h3.6l5.7-5.7a4.5 4.5 0 0 0 5.4-6l-2.8 2.8-2.5-.7-.7-2.5z"/></svg></div><div class="nk">Tools</div><div class="nd">Gmail, Calendar, Notion, what it can reach.</div></div>
-      <div class="need"><div class="ne"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><div class="nk">Rubric</div><div class="nd">your standard for what matters.</div></div>
+      <div class="need"><div class="ne">🧠</div><div class="nk">Brain</div><div class="nd">Claude, it reads and decides.</div></div>
+      <div class="need"><div class="ne">📖</div><div class="nk">Identity</div><div class="nd">who it is and what its job is.</div></div>
+      <div class="need"><div class="ne">👤</div><div class="nk">Context</div><div class="nd">who you are and how you sound.</div></div>
+      <div class="need"><div class="ne">📝</div><div class="nk">Memory</div><div class="nd">what it keeps from last time.</div></div>
+      <div class="need"><div class="ne">🛠️</div><div class="nk">Tools</div><div class="nd">Gmail, Calendar, Notion, what it can reach.</div></div>
+      <div class="need"><div class="ne">🎯</div><div class="nk">Rubric</div><div class="nd">your standard for what matters.</div></div>
     </div>
     <div class="grow"></div>
     <div class="callout">You'll set five of these tonight, in <b>plain English</b>, not code. <b>Memory</b> is the one that grows by itself.</div>
@@ -557,12 +557,12 @@ body{counter-reset:slide}
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The bridge</span></div>
-  <div class="wrap">
+  <div class="ing"><span>🧠</span><span>📖</span><span>👤</span><span>📝</span><span class="on">🛠️</span><span>🎯</span></div><div class="wrap">
     <div class="eyebrow">The one thing that makes it useful</div>
     <h1>The difference is <b>tools.</b></h1>
     <div class="cols">
-      <div class="col"><h3>Without tools</h3><div class="toolrow grey"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8 8 0 0 1-8 8H4l1.7-2.9A8 8 0 1 1 21 11.5z"/></svg></div><p>AI can answer questions, write text, brainstorm ideas.<br><br>Helpful, but it can't touch <b>your</b> world.</p></div>
-      <div class="col" style="border-color:var(--red)"><h3>With tools</h3><div class="toolrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7.5l8.5 6 8.5-6"/></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2.5h8l4 4V21.5H6z"/><path d="M14 2.5v4h4"/></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 10h17M9.5 10v10M15.5 10v10"/></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 5.4L3 17.4V21h3.6l5.7-5.7a4.5 4.5 0 0 0 5.4-6l-2.8 2.8-2.5-.7-.7-2.5z"/></svg></div><p>It can read your Gmail, check your Calendar, create documents, update Notion, search your sheets.<br><br>Now it works on <b>your actual week.</b></p></div>
+      <div class="col"><h3>Without tools</h3><p>AI can answer questions, write text, brainstorm ideas.<br><br>Helpful, but it can't touch <b>your</b> world.</p></div>
+      <div class="col" style="border-color:var(--red)"><h3>With tools</h3><p>It can read your Gmail, check your Calendar, create documents, update Notion, search your sheets.<br><br>Now it works on <b>your actual week.</b></p></div>
     </div>
     <div class="grow"></div>
     <div class="callout">Which raises the obvious question: <b>how does it connect to Gmail?</b> &nbsp;→ that's next.</div>
@@ -572,6 +572,7 @@ body{counter-reset:slide}
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Theory · the plug</span></div>
+  <div class="ing"><span>🧠</span><span>📖</span><span>👤</span><span>📝</span><span class="on">🛠️</span><span>🎯</span></div>
   <div class="wrap">
     <div class="eyebrow">How an agent touches the real world</div>
     <h1>An <b>API</b> is a socket. An <b>MCP</b> is the plug that fits it.</h1>
@@ -587,7 +588,7 @@ body{counter-reset:slide}
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The part people skip</span></div>
-  <div class="wrap">
+  <div class="ing"><span>🧠</span><span>📖</span><span class="on">👤</span><span class="on">📝</span><span>🛠️</span><span>🎯</span></div><div class="wrap">
     <div class="eyebrow">Not the same as knowing who you are</div>
     <h1>Memory is what it <b>keeps</b></h1>
     <div class="memcols">
@@ -610,7 +611,7 @@ body{counter-reset:slide}
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">Where it lives</span></div>
-  <div class="wrap">
+  <div class="ing"><span>🧠</span><span>📖</span><span>👤</span><span class="on">📝</span><span>🛠️</span><span>🎯</span></div><div class="wrap">
     <div class="eyebrow">Why every agent gets its own folder</div>
     <h1>The folder <b>is</b> the memory</h1>
     <div class="fmem">
@@ -634,7 +635,7 @@ vault/        what it learns,
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">The one idea</span></div>
-  <div class="wrap">
+  <div class="ing"><span class="on">🧠</span><span>📖</span><span>👤</span><span>📝</span><span>🛠️</span><span class="on">🎯</span></div><div class="wrap">
     <div class="eyebrow">If you remember one thing tonight</div>
     <h1>Every agent is the <b>same three moves</b></h1>
     <div class="moves">
@@ -653,7 +654,7 @@ vault/        what it learns,
 
 <section class="slide">
   <div class="band"><span class="wm">Co-Work &amp;</span><span class="bd">A real one</span></div>
-  <div class="wrap">
+  <div class="ing"><span>🧠</span><span>📖</span><span>👤</span><span>📝</span><span class="on">🛠️</span><span>🎯</span></div><div class="wrap">
     <div class="eyebrow">So the word stops being abstract</div>
     <h1>This is what an <b>API</b> actually looks like</h1>
     <div class="apidemo">
